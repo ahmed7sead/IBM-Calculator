@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BMI CALCULATOR</title>
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+    <header>
+        <!-- Male Section -->
+        <div class="male">
+            <img src="img/male.png" alt="Male"
+                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><text x=%2250%25%22 y=%2250%25%22 font-size=%2280%22 text-anchor=%22middle%22 dy=%22.3em%22>👨</text></svg>'">
+
+            <h2 class="gender-title">Male</h2>
+
+            <div class="card">
+                <h4>Height <span>CM</span></h4>
+                <div class="input-slider-container">
+                    <input type="number" id="height_male" value="170" min="100" max="250">
+                    <input type="range" id="height_slider_male" class="slider" min="100" max="250" value="170">
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Weight <span>KG</span></h4>
+                <div class="input-slider-container">
+                    <input type="number" id="weight_male" value="70" min="30" max="250">
+                    <input type="range" id="weight_slider_male" class="slider" min="30" max="250" value="70">
+                </div>
+            </div>
+
+            <input type="submit" value="Run" id="male_run">
+        </div>
+
+        <!-- Center Section with Speedometer -->
+        <div class="cal">
+            <h1>KNOW YOUR BMI</h1>
+
+            <div class="speed">
+                <div class="speedmeter"></div>
+                <div class="needle"></div>
+                <h3 id="bmi_value">0.00</h3>
+            </div>
+
+            <button class="status-btn" id="status_btn">Calculate</button>
+
+            <div class="info-box">
+                <h3>📊 BMI Categories:</h3>
+                <p><strong>Underweight:</strong> BMI &lt; 18.5</p>
+                <p><strong>Normal:</strong> BMI 18.5 - 24.9</p>
+                <p><strong>Overweight:</strong> BMI 25 - 29.9</p>
+                <p><strong>Obese:</strong> BMI ≥ 30</p>
+            </div>
+
+            <div class="advice-box" id="advice_box">
+                <p id="advice_text">Calculate your BMI to get personalized advice!</p>
+            </div>
+        </div>
+
+        <!-- Female Section -->
+        <div class="female">
+            <img src="img/female.png" alt="Female"
+                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><text x=%2250%25%22 y=%2250%25%22 font-size=%2280%22 text-anchor=%22middle%22 dy=%22.3em%22>👩</text></svg>'">
+
+            <h2 class="gender-title">Female</h2>
+
+            <div class="card">
+                <h4>Height <span>CM</span></h4>
+                <div class="input-slider-container">
+                    <input type="number" id="height_female" value="160" min="100" max="250">
+                    <input type="range" id="height_slider_female" class="slider" min="100" max="250" value="160">
+                </div>
+            </div>
+
+            <div class="card">
+                <h4>Weight <span>KG</span></h4>
+                <div class="input-slider-container">
+                    <input type="number" id="weight_female" value="60" min="30" max="250">
+                    <input type="range" id="weight_slider_female" class="slider" min="30" max="250" value="60">
+                </div>
+            </div>
+
+            <input type="submit" value="Run" id="female_run">
+        </div>
+    </header>
+
+    <div class="history-section">
+        <h2> History</h2>
+        <div id="history-list"></div>
+        <button class="clear-btn" onclick="clearHistory()">Clear History</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
