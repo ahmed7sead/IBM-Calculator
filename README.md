@@ -15,9 +15,8 @@
 
 ## 🚀 Live Demo
 
-[**Try it now →**](https://ahmed7sead.github.io/BMI-Calculator/)
-
-##  BMI Categories
+[[[**Try it now →**](https://ahmed7sead.github.io/BMI-Calculator/)
+](https://ahmed7sead.github.io/IBM-Calculator/)
 
 | Category | BMI Range | Color Code |
 |----------|-----------|------------|
